@@ -5,13 +5,13 @@ import Logo from "../../assets/logo.png";
 const Navbar = () => {
   return (
     <header>
-      <div className="container py-3">
+      <div className="container py-3 flex items-center justify-between">
         {/* logo section */}
         <div>
-          <img src={Logo} alt="" className="w-36" />
+          <img src={Logo} alt="" className="w-40" />
         </div>
         {/* navigation  links section */}
-        <ul>
+        <ul className="hidden md:flex items-center gap-5">
           <li>
             <a href="#">Products</a>
           </li>
@@ -27,7 +27,9 @@ const Navbar = () => {
         </ul>
         {/* buttons section */}
         <div>
-          <button>Get in touch</button>
+          <button className="border border-gray-400 px-4 py-2 rounded-lg hover:bg-primary hover:text-white transform duration-300">
+            Get in touch
+          </button>
         </div>
       </div>
     </header>
