@@ -5,7 +5,7 @@ import HeroImage from "../../assets/hero.png";
 const Hero = () => {
   return (
     <section>
-      <div className="bg-brandWhite rounded container grid grid-cols-1 md:grid-cols-2 gap-6 min-h-[650px]">
+      <div className="bg-brandWhite rounded-3xl container grid grid-cols-1 md:grid-cols-2 gap-6 min-h-[650px]">
         {/* text section */}
         <div className="flex flex-col justify-center xl:pr-40">
           <div className="mt-24 mb-10 md:mt-0 md:mb-0 space-y-6 text-center md:text-left">
@@ -27,7 +27,6 @@ const Hero = () => {
           <img src={HeroImage} alt="" />
         </div>
       </div>
-      Hero
     </section>
   );
 };
