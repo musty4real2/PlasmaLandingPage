@@ -1,17 +1,22 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 import Logo from "../../assets/logo.png";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   return (
-    <header>
+    <motion.header
+      initial={{ opacity: 0, y: -100 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: 0.6 }}
+    >
       <div className="container py-5 flex items-center justify-between">
-        {/* logo section */}
+        {/* Logo section */}
         <div>
-          <img src={Logo} alt="" className="w-40" />
+          <img src={Logo} alt="" className="w-48" />
         </div>
-        {/* navigation  links section */}
-        <ul className="hidden md:flex items-center gap-5">
+        {/* Navlinks section */}
+        <ul className="hidden md:flex items-center gap-10 md:text-base text-sm">
           <li>
             <a href="#">Products</a>
           </li>
@@ -25,14 +30,15 @@ const Navbar = () => {
             <a href="#">Blogs</a>
           </li>
         </ul>
-        {/* buttons section */}
+        {/* Button section */}
         <div>
           <button className="border border-gray-400 px-4 py-2 rounded-lg hover:bg-primary hover:text-white transform duration-300">
+            {" "}
             Get in touch
           </button>
         </div>
       </div>
-    </header>
+    </motion.header>
   );
 };
 
